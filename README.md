@@ -2,7 +2,7 @@
 
 ![Prop Hunt Logo](./Images/prophuntlogo.png)
 
-```Compatible with v2024.10.29 ```
+```Compatible with v17.0.1(v2025.10.14) ```
 # Prop Hunt
 
 A mod for [Among Us](https://store.steampowered.com/app/945360/Among_Us/) which extends Hide and Seek into a new mode, Prop Hunt!
@@ -28,13 +28,9 @@ Prop Hunt uses the same rules and basics as Hide and Seek. Simply create a Hide 
 <!-- | Infection Mode | Whether Props become Seekers when they are killed | True |  -->
 
 ## Installation
-Download the zip from the [latest release](https://github.com/ugackMiner53/PropHunt/releases), and extract the contents into your Among Us game folder.
+Download the zip from the [latest release](https://github.com/superidol1890/PropHuntReloaded/releases), and extract the contents into your Among Us game folder.
 
 Although the mod *may* work on official servers, it is highly discouraged to do so, and will likely get you banned. Instead, try to setup your own modded server using [Impostor](https://github.com/Impostor/Impostor) or another Reactor compatible server.
-
-## Compatability
-Prop Hunt is fully compatible with [Submerged](https://github.com/SubmergedAmongUs/Submerged)!
-
 It is also designed to work well with other mods, but you may run into incompatibilities with certain tested mods. 
 File an [issue](https://github.com/ugackMiner53/PropHunt/issues) if you find any problems!
 
