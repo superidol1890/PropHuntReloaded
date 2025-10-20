@@ -32,7 +32,7 @@ Download the zip from the [latest release](https://github.com/superidol1890/Prop
 
 Although the mod *may* work on official servers, it is highly discouraged to do so, and will likely get you banned. Instead, try to setup your own modded server using [Impostor](https://github.com/Impostor/Impostor) or another Reactor compatible server.
 It is also designed to work well with other mods, but you may run into incompatibilities with certain tested mods. 
-File an [issue](https://github.com/ugackMiner53/PropHunt/issues) if you find any problems!
+File an [issue](https://github.com/superidol1890/PropHuntReloaded/issues) if you find any problems!
 
 ## Contributing
 Contributions are welcome! Submit a [pull request](https://github.com/superidol1890/PropHuntReloaded/pulls) and give a brief description and the code will be reviewed as soon as possible.
