@@ -35,4 +35,4 @@ It is also designed to work well with other mods, but you may run into incompati
 File an [issue](https://github.com/ugackMiner53/PropHunt/issues) if you find any problems!
 
 ## Contributing
-Contributions are welcome! Submit a [pull request](https://github.com/ugackMiner53/PropHunt/pulls) and give a brief description and the code will be reviewed as soon as possible.
+Contributions are welcome! Submit a [pull request](https://github.com/superidol1890/PropHuntReloaded/pulls) and give a brief description and the code will be reviewed as soon as possible.
