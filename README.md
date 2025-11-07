@@ -36,3 +36,7 @@ File an [issue](https://github.com/superidol1890/PropHuntReloaded/issues) if you
 
 ## Contributing
 Contributions are welcome! Submit a [pull request](https://github.com/superidol1890/PropHuntReloaded/pulls) and give a brief description and the code will be reviewed as soon as possible.
+
+> This mod is not affiliated with Among Us or Innersloth LLC, and the content contained therein is not endorsed or
+> otherwise sponsored by Innersloth LLC. Portions of the materials contained herein are property of Innersloth LLC. ©
+> Innersloth LLC.
