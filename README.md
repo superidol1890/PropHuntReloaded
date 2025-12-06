@@ -1,4 +1,6 @@
-﻿[![Made With Reactor](./Images/madewithreactor.png)](https://github.com/NuclearPowered/Reactor)
+# Note: Prop Hunt works with v2025.11.18(v17.1.0)
+
+ [![Made With Reactor](./Images/madewithreactor.png)](https://github.com/NuclearPowered/Reactor)
 
 ![Prop Hunt Logo](./Images/prophuntlogo.png)
 
