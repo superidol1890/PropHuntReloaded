@@ -4,7 +4,7 @@
 
 ![Prop Hunt Logo](./Images/prophuntlogo.png)
 
-```Compatible with v17.0.1(v2025.10.14) ```
+```Compatible with v17.1.0(v2025.11.18) ```
 # Prop Hunt
 
 A mod for [Among Us](https://store.steampowered.com/app/945360/Among_Us/) which extends Hide and Seek into a new mode, Prop Hunt!
