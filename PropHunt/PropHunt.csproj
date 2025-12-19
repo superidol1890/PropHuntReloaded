@@ -5,10 +5,10 @@
         <DebugType>embedded</DebugType>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 
-        <VersionPrefix>2025.10.19</VersionPrefix>
-        <VersionSuffix>dev</VersionSuffix>
-        <Description>Prop Hunt Reloaded</Description>
-        <Authors>ugackMiner and Super Idol</Authors>
+        <VersionPrefix>2025.12.17</VersionPrefix>
+        <VersionSuffix>test</VersionSuffix>
+        <Description>Prop Hunt Mod</Description>
+        <Authors>ugackMiner, Super Idol</Authors>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -18,10 +18,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Reactor" Version="2.5.0-ci.371" />
+        <PackageReference Include="Reactor" Version="2.5.0" />
         <PackageReference Include="BepInEx.Unity.IL2CPP" Version="6.0.0-be.697" Private="false" ExcludeAssets="runtime;native" />
         <PackageReference Include="AmongUs.GameLibs.Steam" Version="2025.11.18" PrivateAssets="all" />
-
         <PackageReference Include="BepInEx.AutoPlugin" Version="1.1.0" PrivateAssets="all" />
         <PackageReference Include="BepInEx.IL2CPP.MSBuild" Version="2.0.1" PrivateAssets="all" ExcludeAssets="runtime" />
     </ItemGroup>

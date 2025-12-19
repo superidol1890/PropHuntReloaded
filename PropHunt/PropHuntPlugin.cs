@@ -1,7 +1,4 @@
-﻿// Core Script of PropHuntPlugin
-// Copyright (C) 2024 ugackMiner
-
-using BepInEx;
+﻿using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
@@ -11,23 +8,20 @@ using Reactor.Utilities;
 
 namespace PropHunt;
 
-[BepInPlugin("com.ugackminer.amongus.prophunt", "Prop Hunt", "v2024.11.5")]
+[BepInPlugin("com.SuperIdol.amongus.prophunt", "Prop Hunt", "2025.10.14")]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
 public partial class PropHuntPlugin : BasePlugin
 {
-    // Backend Variables
-    public Harmony Harmony { get; } = new("com.ugackminer.amongus.prophunt");
+    public Harmony Harmony { get; } = new("com.SuperIdol.amongus.prophunt");
     public ConfigEntry<bool> IsPropHunt { get; private set; }
     public ConfigEntry<float> MissTimePenalty { get; private set; }
     public ConfigEntry<bool> Infection { get; private set; }
 
-    // Gameplay Variables
     public static bool isPropHunt = true;
     public static float missTimePenalty = 10f;
     public static bool infection = false;
-    
-    // Constants
+
     public const float propMoveSpeed = 0.5f;
     public const float maxPropDistance = 0.6f;
 

@@ -11,11 +11,9 @@ namespace PropHunt.Settings
 {
     class PropHuntSettings 
     {
-        // Prop Hunt Setting
         static StringNames propHuntStringName = CustomStringName.CreateAndRegister("Prop Hunt");
         static BoolOptionNames propHuntBooleanName;
-    
-        // Time Penalty Setting
+
         static StringNames timePenaltyStringName = CustomStringName.CreateAndRegister("Miss Penalty");
         static FloatOptionNames timePenaltyFloatName;
 
@@ -23,21 +21,17 @@ namespace PropHunt.Settings
         static RulesCategory propHuntCategory;
 
 
-        // This is run on plugin load and adds the option value names to their respective enums
         public static void SetupCustomSettings() 
         {
-            // Add PropHunt option
             propHuntBooleanName = (BoolOptionNames)Enum.GetValues<BoolOptionNames>().Length;
             EnumInjector.InjectEnumValues<BoolOptionNames>(new Dictionary<string, object>{{"PropHunt", propHuntBooleanName}});
 
-            // Add TimePenalty option
             timePenaltyFloatName = (FloatOptionNames)Enum.GetValues<FloatOptionNames>().Length;
             EnumInjector.InjectEnumValues<FloatOptionNames>(new Dictionary<string, object>{{"TimePenalty", timePenaltyFloatName}});
         }
 
         #region Get/Set Interceptors
-        
-        // Intercept option requests and change the settings
+
         [HarmonyPatch(typeof(IGameOptionsExtensions), nameof(IGameOptionsExtensions.GetValue))]
         [HarmonyPostfix]
         static void GetValuePatch(IGameOptions gameOptions, BaseGameSetting data, ref float __result) 
@@ -53,7 +47,6 @@ namespace PropHunt.Settings
             }
         }
 
-        // Overrides booleans being set
         [HarmonyPatch(typeof(HideNSeekGameOptionsV08), nameof(HideNSeekGameOptionsV08.SetBool))]
         [HarmonyPrefix]
         static bool SetBoolPatch(HideNSeekGameOptionsV08 __instance, BoolOptionNames optionName, bool value) 
@@ -65,7 +58,6 @@ namespace PropHunt.Settings
             return true;
         }
 
-        // Overrides floats being set
         [HarmonyPatch(typeof(HideNSeekGameOptionsV08), nameof(HideNSeekGameOptionsV08.SetFloat))]
         [HarmonyPrefix]
         static bool SetFloatPatch(HideNSeekGameOptionsV08 __instance, FloatOptionNames optionName, float value) 
@@ -78,7 +70,6 @@ namespace PropHunt.Settings
         }
         #endregion
 
-        // Adds prop hunt settings to HideAndSeekManagerPrefab when GameManagerCreator is started
         [HarmonyPatch(typeof(GameManagerCreator), nameof(GameManagerCreator.Awake))]
         [HarmonyPostfix]
         static void GameManagerCreatorPatch(GameManagerCreator __instance) 
@@ -90,7 +81,7 @@ namespace PropHunt.Settings
             propHuntCheckbox.OptionName = propHuntBooleanName;
             propHuntCheckbox.Type = OptionTypes.Checkbox;
             propHuntCheckbox.name = "Prop Hunt";
-            allGameList.System_Collections_IList_Add(propHuntCheckbox);
+            allGameList.Add(propHuntCheckbox);
 
             FloatGameSetting timePenaltyFloat = ScriptableObject.CreateInstance<FloatGameSetting>();
             timePenaltyFloat.Title = timePenaltyStringName;
@@ -103,7 +94,7 @@ namespace PropHunt.Settings
             timePenaltyFloat.ZeroIsInfinity = false;
             timePenaltyFloat.ValidRange = new FloatRange(0, 60);
             timePenaltyFloat.Value = PropHuntPlugin.missTimePenalty;
-            allGameList.System_Collections_IList_Add(timePenaltyFloat);
+            allGameList.Add(timePenaltyFloat);
 
 
             propHuntCategory = new RulesCategory
@@ -112,7 +103,7 @@ namespace PropHunt.Settings
                 CategoryName = propHuntStringName
             };
 
-            __instance.HideAndSeekManagerPrefab.gameSettingsList.AllCategories.System_Collections_IList_Add(propHuntCategory);
+            __instance.HideAndSeekManagerPrefab.gameSettingsList.AllCategories.Add(propHuntCategory);
         }
     }
 }

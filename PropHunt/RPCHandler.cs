@@ -19,7 +19,6 @@ public static class RPCHandler
     public static void RPCPropSync(PlayerControl player, string propIndex)
     {
         GameObject prop = ShipStatus.Instance.AllConsoles[int.Parse(propIndex)].gameObject;
-        // Logger<PropHuntPlugin>.Info($"{player.Data.PlayerName} changed their sprite to: {prop.name}");
 
         SpriteRenderer propRenderer = PropManager.playerToProp[player];
         propRenderer.transform.localScale = prop.transform.lossyScale * 1.429f;
@@ -37,7 +36,6 @@ public static class RPCHandler
     [MethodRpc((uint)RPC.FailedKill)]
     public static void RPCFailedKill(PlayerControl player) 
     {
-        // Unsure if this is needed, decrease timer by missPenalty
         GameManager.Instance.Cast<HideAndSeekManager>().LogicFlowHnS.AdjustEscapeTimer(PropHuntPlugin.missTimePenalty, true);
         Coroutines.Start(Utility.KillConsoleAnimation());
         GameObject closestProp = Utility.FindClosestConsole(player.gameObject, GameOptionsManager.Instance.CurrentGameOptions.GetInt(Int32OptionNames.KillDistance) + 5);
@@ -60,7 +58,6 @@ public static class RPCHandler
             PropHuntPlugin.Instance.Config.Save();
         }
 
-        // Change other variables based on prop hunt state
         if (GameStartManager.InstanceExists) {
             GameStartManager.Instance.MinPlayers = PropHuntPlugin.isPropHunt ? 2 : 4;
         }
