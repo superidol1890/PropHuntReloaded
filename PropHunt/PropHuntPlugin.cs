@@ -8,7 +8,7 @@ using Reactor.Utilities;
 
 namespace PropHunt;
 
-[BepInPlugin("com.SuperIdol.amongus.prophunt", "Prop Hunt", "2025.10.14")]
+[BepInPlugin("com.SuperIdol.amongus.prophunt", "Prop Hunt", "2025.11.18")]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
 public partial class PropHuntPlugin : BasePlugin
